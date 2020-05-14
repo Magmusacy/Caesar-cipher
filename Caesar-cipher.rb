@@ -1,4 +1,3 @@
-require 'pry'
 =begin
 Pass a string and a number to Cipher method
 Convert string to an array with every letter as a different element
