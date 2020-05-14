@@ -11,3 +11,27 @@ don't forget to wrap from z to a
 if letter has a charcode of for example 80 and we subtract initial value from it (in that case initial value is 65) we'll get a value of 15 which represents how many shifts we have
 to do from starting position to the current letter
 =end
+def check_case(character) 
+    character >= 97 ? 97 : 65
+end
+def shift_index(number) 
+   p number > 25 ? (number % 26) : number
+end
+def cipher(string, number)
+    p char_codes = string.split("").map{ |element| element.ord }
+
+    char_codes.each do |code|
+
+    initial_value = check_case(code)
+
+        if initial_value == 65
+
+        elsif initial_value == 97 
+            p (initial_value + shift_index(code-initial_value+number)).chr #Shifts letters from initial value (a) to (a) + shift_index
+            
+        else
+
+        end
+    end
+end
+
